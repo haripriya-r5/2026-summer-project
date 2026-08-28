@@ -1,0 +1,26 @@
+"""
+student = {
+    "name": "Haripriya",
+    "age": 16,
+    "birth year": 1407
+}
+
+#print(student["name"])
+student["birth year"] = "234"
+#print(student["birth year"])
+
+for key in student:
+    print(key)
+print("\nNext")
+for value in student.values():
+    print(value)
+print("\nNext")
+for key, value in student.items():
+    print(key, value)
+"""
+# frequency counting
+freq = {}
+for character in "lollipop":
+    freq[character] = freq.get(character, 0) + 1
+
+print(freq) 

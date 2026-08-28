@@ -1,0 +1,26 @@
+## set-up variables
+nums = []
+integer = 5
+output = []
+success = False
+
+## input
+string_list = input("Please enter 5 numbers, separated by spaces.").split()
+
+## convert to integer list
+for item in string_list:
+    nums.append(int(item))
+
+## check which numbers sum to the integer
+for x in nums:
+    value = integer - x
+    for i in range(1, len(nums)):
+        if nums[i] == value:
+            output.extend([x, nums[i]])
+            success = True
+            break
+    if success == True:
+        break
+
+## output
+print(f"Input: {nums}, integer = {integer}\nOutput: {output}")
