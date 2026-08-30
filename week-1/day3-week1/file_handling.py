@@ -14,7 +14,6 @@ with open("practice_file-handling.txt", "r") as file:
 with open("practice_file-handling.txt", "r") as file:
     lines = file.readlines()
     print(lines)
-"""
 
 ## extract
 
@@ -38,3 +37,4 @@ with open("practice_file-handling.txt") as file:
     for line in file:
         characters += line.strip()
 print(characters)
+"""

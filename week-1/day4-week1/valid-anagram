@@ -1,0 +1,39 @@
+def valid_anagram(word_1, word_2):
+    # make lists with the two words
+    list_1 = []
+    for char in word_1:
+        list_1.append(char)
+    list_2 = []
+    for char in word_2:
+            list_2.append(char)
+
+    # if the length of the words is diff, not an anagram
+    if len(list_1) != len(list_2):
+        return "isn't"
+
+    # make
+    result = []
+    for i in range(len(list_1)):
+        result.insert(i, False)
+
+    iter = 0
+    for x in list_1:
+        for y in list_2:
+            if x == y:
+                list_2.remove(y)
+                result[iter] = True
+                break
+        iter += 1
+
+    if False in result:
+        return "isn't"
+    else:
+        return "is"
+              
+# anagram, nagaram
+
+word_1 = input("Please enter a word.")
+word_2 = input("Please enter another word.")
+
+verdict = valid_anagram(word_1, word_2)
+print(f"This {verdict} a valid anagram.")

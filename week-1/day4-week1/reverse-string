@@ -1,0 +1,11 @@
+def reverse_string(word):
+    # the purpose of this function is to output the reverse of the string array input
+    list = []
+    iteration = 0
+    for char in word:
+        list.insert(-1-iteration, char)
+        iteration += 1
+    return list
+
+word = input("Please enter your word")
+print(reverse_string(word))
