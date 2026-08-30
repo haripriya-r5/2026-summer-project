@@ -1,5 +1,4 @@
 ## read file
-"""
 # read entire file
 with open("practice_file-handling.txt", "r") as file:
     content = file.read()
@@ -37,4 +36,3 @@ with open("practice_file-handling.txt") as file:
     for line in file:
         characters += line.strip()
 print(characters)
-"""
